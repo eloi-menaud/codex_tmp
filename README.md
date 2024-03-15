@@ -5,6 +5,7 @@ Codex, it's built to be usable as it is. No need to build, run script etc.
 ## Set-up
 - create dir named `codex`
 - add a `codex.yaml`
+- add a `codex.html`
 - copy/past following in `codex.html` :
 ```html
 <!DOCTYPE html>
