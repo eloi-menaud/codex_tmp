@@ -29,7 +29,7 @@ function generate(key,obj){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('codex.yaml')
+    fetch('codex.yaml',{mode: 'cors'})
     .then(response => response.text())
     .then(text => {
         links_obj = jsyaml.load(text);
