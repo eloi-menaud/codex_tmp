@@ -29,7 +29,7 @@ Codex, it's built to be usable as it is. No need to build, run script etc.
 </html>
 ```
 ## Use it
-Edit the `codex.yml` to create your sctructure following this exemple:
+Edit the `codex.yaml` to create your sctructure following this exemple:
 ```yaml
 LINKS:
   'a root link': https://
