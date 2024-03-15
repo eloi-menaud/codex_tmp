@@ -1,34 +1,46 @@
 # codex : Linktree as code
-Codex, it's built to be usable as it is.No need to build, configure, run script...
+Codex, it's built to be usable as it is. No need to build, run script etc.
 
-Simply add your links in the `codex.yaml` like so :
-```yaml
-LINKS: # mandatory key
-  link: https://.....
-  directory:
-    link_1: https://.....
-    link_2: https://.....
-    directory:
-      link: https://.....
-  directory_2:
-    link: https://.....
+# Get started
+## Set-up
+- create dir named `codex`
+- add a `codex.yaml`
+- copy/past following in `codex.html` :
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/eloi-menaud/codex/fav.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eloi-menaud/codex/index.css">
+    <title>Codex</title>
+</head>
+<body>
+    <div><img src="https://cdn.jsdelivr.net/gh/eloi-menaud/codex/logo.svg"><h1>Codex</h1></div>
+    <main id="main"></main>
+    <script src="https://cdn.jsdelivr.net/gh/eloi-menaud/codex/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nodeca/js-yaml/dist/js-yaml.min.js"></script>
+</body>
+</html>
 ```
+## Use it
+Edit the `codex.yml` to create your sctructure following this exemple:
+```yaml
+LINKS:
+  'a root link': https://
+  'first directory':
+    'a link in directory': https://
+    'a sub directory':
+      'a link in sub directory': https://
+  'second directory':
+    'a link in directory': https://
+```
+> root key must be `LINKS`
 
-ad open the `codex.html` will give :
+Opening the `codex.html` will give :
 
 ![](doc/exemple.png)
-
-# rules and features
-- the root key in `codex.yaml` must be `LINKS:`
-- to add _spaces_ in a directory or link name use uderscore`hello_word -> hello word`
-- the `codex.yaml` must be in same dir as `codex.html` (cause it uses relative path)
-
-# clean up
-after downloading or cloning of the repo yout can remove everything except :
-```
-codex.yaml
-codex.html
-logo.svg
-fav.ico
-```
-> you can remove `logo.svg` & `fav.ico`, it will work properly but you will no longer have favicon in tabs and logo in title

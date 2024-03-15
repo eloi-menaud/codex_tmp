@@ -1,9 +1,8 @@
 LINKS:
-  link: https://.....
-  directory:
-    link_1: https://.....
-    link_2: https://.....
-    directory:
-      link: https://.....
-  directory_2:
-    link: https://.....
+  'a root link': https://
+  'first directory':
+    'link in directory': https://
+    'sub directory':
+      'link in sub directory': https://
+  'second directory':
+    'link in directory': https://

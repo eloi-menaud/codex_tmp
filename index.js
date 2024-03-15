@@ -1,14 +1,13 @@
 const fold   = (event,element) => {element.classList.toggle('folded');event.stopPropagation();}
-const div    = (name,content)  => {return `<div onclick="fold(event,this)" class="folded"><h2>${name.replace('_',' ')}</h2>${content}</div>`};
-const button = (name,link)     => {return `<button onclick="window.location.href ='${link}'">${name.replace('_',' ')}</button>`;};
+const div    = (name,content)  => {return `<div onclick="fold(event,this)" class="folded"><h2>${name}</h2>${content}</div>`};
+const button = (name,link)     => {return `<button onclick="window.location.href ='${link}'">${name}</button>`;};
 const image  = (name)          => {return `<img src="images/${name}.png">`}
 function is_image(name){
     return fetch(`images/${name}.png`, { method: 'HEAD' })
         .then(response => {
             return response.ok;
-            return false;
         })
-        .catch(error => {return false;});
+        .catch(_ => {return false;});
 }
 function generate(key,obj){
     const content = "<section>" +
