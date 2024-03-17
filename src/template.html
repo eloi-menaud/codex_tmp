@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
     <link rel="icon" type="image/x-icon" href="fav.ico">
-    <link rel="stylesheet" href="./index.css">
     <title>Codex</title>
 </head>
+<script>
+    const fold = (event,element) => {element.classList.toggle('folded');event.stopPropagation();}
+</script>
 <body>
-    <div>
-        <img src="logo.svg">
-        <h1>Codex</h1>
-    </div>
-    <main id="main"></main>
-    <script src="./index.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/nodeca/js-yaml/dist/js-yaml.min.js"></script>
-</body>
-</html>
+<div>
+    <img src="logo.svg">
+    <h1>Codex</h1>
+</div>
+<main>
