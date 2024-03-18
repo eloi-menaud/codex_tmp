@@ -1,5 +1,7 @@
 LINKS:
-  link2: http://
-  😊link4: http://
-  link:
-    link: http://
+  link with spaces: https://
+  directory:
+    ✨ link with emoji: https://
+    sub directory:
+        link: https://
+        link2: k
